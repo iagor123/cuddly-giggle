@@ -1,0 +1,24 @@
+<input type="text" id="numero" />
+<input type="submit" id="adivinhar" value="Compare com o meu segredo!" />
+
+<script>
+	function botaoClicado() {
+		for(var i = 0; i < segredos.length; i++) {
+			if(segredos[i] == caixaDoNumero.value) {
+				alert("Parabéns! Você acertou o número");
+				caixaDoNumero.value = "";
+				return;
+				}
+			}
+		caixaDoNumero.value = "";
+		alert("Infelizmente você errou!");
+	}
+	
+	var segredos = [16, 34, 37, 42, 50, 58];
+	var caixaDoNumero = document.getElementById("numero");	
+	var botaoAdivinhar = document.getElementById("adivinhar");
+	botaoAdivinhar.onclick = botaoClicado;
+</script>
+
+Caso acertar, queria mostra a mensagem "Parabéns! Você acertou o número ** na ** posição,contudo não estou conseguindo.
+É necessário criar uma função para este procedimento?
